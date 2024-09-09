@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MatrizProps } from './MatrizProps';
 
-const AgrMatriz: React.FC<MatrizProps> = ({ fila, columna, onChange }) => {
+const ModMatriz: React.FC<MatrizProps> = ({ fila, columna, onChange }) => {
     const [matriz, setMatriz] = useState<number[][]>(
         Array.from({ length: fila }, () => Array(columna).fill(0))
     );
@@ -38,4 +38,4 @@ const AgrMatriz: React.FC<MatrizProps> = ({ fila, columna, onChange }) => {
       );
 };
 
-export default AgrMatriz;
+export default ModMatriz;
