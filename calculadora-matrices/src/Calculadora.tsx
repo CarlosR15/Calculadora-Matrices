@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
+import './CalculatorM.css';
 import ModMatriz from './ModMatriz';
 import OpMatriz from './OperacionesMatriz';
 import ResMatriz from './ResMatriz';
 
 function Calculadora() {
+    const [] = useState<number[][]>([]);
     const [matrizA, setMatrizA] = useState<number[][]>([]);
     const [matrizB, setMatrizB] = useState<number[][]>([]);
     const [resultado, setResultado] = useState<number[][]>([]);
@@ -18,8 +20,9 @@ function Calculadora() {
 
     return (
         <div>
-            <h1>Calculadora de Matrices</h1>
-            <div>
+            <h1>Calculadora de Matrices</h1>            
+
+            <div className="matrices">
                 <h2>Matriz A</h2>
                 <ModMatriz fila={2} columna={2} onChange={setMatrizA} />
 
