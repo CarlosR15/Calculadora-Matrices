@@ -5,7 +5,6 @@ import OpMatriz from './OperacionesMatriz';
 import ResMatriz from './ResMatriz';
 
 function Calculadora() {
-    const [] = useState<number[][]>([]);
     const [matrizA, setMatrizA] = useState<number[][]>([]);
     const [matrizB, setMatrizB] = useState<number[][]>([]);
     const [resultado, setResultado] = useState<number[][]>([]);
@@ -20,21 +19,27 @@ function Calculadora() {
 
     return (
         <div>
-            <h1>Calculadora de Matrices</h1>            
+            <h1 className="titulo">Calculadora de Matrices</h1>
 
             <div className="matrices">
-                <h2>Matriz A</h2>
-                <ModMatriz fila={2} columna={2} onChange={setMatrizA} />
+                <div className="matrizConTit">
+                    <h2 className="matrizTitulo">Matriz A</h2>
+                    <ModMatriz fila={2} columna={2} onChange={setMatrizA} />
+                </div>
 
-                <h2>Matriz B</h2>
-                <ModMatriz fila={2} columna={2} onChange={setMatrizB} />
+
+                <OpMatriz matrizA={matrizA} matrizB={matrizB} setResultado={setResultado} />
+
+                <div className="matrizConTit">
+                    <h2 className="matrizTitulo">Matriz B</h2>
+                    <ModMatriz fila={2} columna={2} onChange={setMatrizB} />
+                </div>
             </div>
-            
-            <h3>¿Qué operación quieres hacer?</h3>
-            <OpMatriz matrizA={matrizA} matrizB={matrizB} setResultado={setResultado} />
 
-            <h2>Resultado</h2>
-            <ResMatriz resultado={resultado} />
+            <div className="resultado">
+                <h2>Resultado</h2>
+                <ResMatriz resultado={resultado} />
+            </div>
         </div>
     );
 };

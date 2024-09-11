@@ -2,13 +2,13 @@ import { ResMatrizProps } from './ResultadoMatrizProps';
 
 const ResMatriz: React.FC<ResMatrizProps> = ({ resultado }) => {
     return (
-        <div>
+        <div className='resultado'>
             <table>
                 <tbody>
                     {resultado.map((fila, filaIndex) => (
-                        <tr key={filaIndex}>
+                        <tr className='tablaRes' key={filaIndex}>
                             {fila.map((value, columnaIndex) => (
-                                <td key={columnaIndex}>{value}</td>
+                                <td className='tablaRes' key={columnaIndex}>{value}</td>
                             ))}
                         </tr>
                     ))}

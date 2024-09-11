@@ -67,12 +67,12 @@ const OpMatriz: React.FC<OperacionesProps> = ({ matrizA, matrizB, setResultado }
   };
 
   return (
-    <div>
-      <h2>{alertaE}</h2>
-      <button onClick={handleSuma}>Sumar</button>
-      <button onClick={handleResta}>Restar</button>
-      <button onClick={handleMult}>Multiplicar</button>
-      <button onClick={handleTransponerA}>Transponer Matriz A</button>
+    <div className='operaciones'>
+      <h4 className='err'>{alertaE}</h4>
+      <button onClick={handleSuma}>A + B</button>
+      <button onClick={handleResta}>A - B</button>
+      <button onClick={handleMult}>A * B</button>
+      <button onClick={handleTransponerA}>T Matriz A</button>
     </div>
   );
 };

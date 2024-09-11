@@ -26,7 +26,7 @@ export const restarMatrices = (matrizA: number[][], matrizB: number[][]): number
 
 export const multiplicarMatrices = (matrizA: number[][], matrizB: number[][]): number[][] => {
     if (!verificarDimensionesIguales(matrizA, matrizB)) {
-        throw new Error("El número de columnas de la primera matriz debe ser igual al número de filas de la segunda matriz");
+        throw new Error("Las matrices no tienen las mismas dimensiones");
     }
     const result: number[][] = Array(matrizA.length)
         .fill(0)
