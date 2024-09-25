@@ -1,4 +1,5 @@
 //Verificador de matrices para saber si tienen las mismas dimenciones
+// Se puede cambiar el nombre a metodos aritmeticos
 const verificarDimensionesIguales = (matrizA: number[][], matrizB: number[][]): boolean => {
     //Si la matriz A y B tienen las mismas filas y columnas, y si no las tienen devuelve false
     if (matrizA.length !== matrizB.length) return false;
